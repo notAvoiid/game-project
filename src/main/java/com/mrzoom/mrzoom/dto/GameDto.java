@@ -1,7 +1,6 @@
 package com.mrzoom.mrzoom.dto;
 
 import com.mrzoom.mrzoom.entities.Game;
-import jakarta.persistence.Column;
 import org.springframework.beans.BeanUtils;
 
 public class GameDto {
