@@ -6,8 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "tb_belonging")
-public class Belonging {
-
+public class Belonging{
 	@EmbeddedId
 	private BelongingPK id = new BelongingPK();
 
@@ -19,6 +18,22 @@ public class Belonging {
 	public Belonging(Game game, GameList list, Integer position) {
 		id.setGame(game);
 		id.setList(list);
+		this.position = position;
+	}
+
+	public BelongingPK getId() {
+		return id;
+	}
+
+	public void setId(BelongingPK id) {
+		this.id = id;
+	}
+
+	public Integer getPosition() {
+		return position;
+	}
+
+	public void setPosition(Integer position) {
 		this.position = position;
 	}
 }

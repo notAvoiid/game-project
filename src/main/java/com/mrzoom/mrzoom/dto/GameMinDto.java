@@ -1,6 +1,7 @@
 package com.mrzoom.mrzoom.dto;
 
 import com.mrzoom.mrzoom.entities.Game;
+import com.mrzoom.mrzoom.projections.GameMinProjection;
 
 public class GameMinDto {
 
@@ -18,6 +19,13 @@ public class GameMinDto {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+    public GameMinDto(GameMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
     public Long getId() {
